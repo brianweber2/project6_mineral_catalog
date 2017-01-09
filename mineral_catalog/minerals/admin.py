@@ -4,4 +4,8 @@ from django.contrib import admin
 from .models import Mineral
 
 
-admin.site.register(Mineral)
+class MineralAdmin(admin.ModelAdmin):
+    search_fields = ('name',)
+
+
+admin.site.register(Mineral, MineralAdmin)

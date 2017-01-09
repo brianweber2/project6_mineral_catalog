@@ -23,5 +23,9 @@ class Mineral(models.Model):
     specific_gravity = models.CharField(max_length=255, blank=True, default='')
 
 
+    class Meta:
+        ordering = ['name']
+
+
     def __str__(self):
         return self.name
